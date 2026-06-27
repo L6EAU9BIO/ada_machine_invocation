@@ -15,66 +15,60 @@ const boutonChanger = document.getElementById("bouton_changer")
 const inputPrenom = document.getElementById("prenom")
 const selectCreature = document.getElementById("creature")
 
-//LINK PARAGRAPHE
+// LINK PARAGRAPHE
 
 const descriptCreat = document.getElementById("descriptif_creature")
 
-//LINK IMG
+// LINK IMG
 
 const imagesCreatures = {
-
-    "Goblin" : document.getElementById("goblin"),
-    "Fée" : document.getElementById("fee"),
+    "Goblin"     : document.getElementById("goblin"),
+    "Fée"        : document.getElementById("fee"),
     "Loup-Garou" : document.getElementById("loup_garou"),
-    "Sirène" : document.getElementById("sirene")
-    
+    "Sirène"     : document.getElementById("sirene")
 }
-//DESCRIPIF CREATURE
+
+// DESCRIPTIF CREATURE
 
 const descriptions = {
-   
-    "Goblin" : "Oscilliant entre perfidité maligne et nervosuté exacerbé, le goblin est un compagnon qui sera vous preter main forte au combat. A moins qu'il decide de s'enfuir face au danger...",
+    "Goblin"     : "Oscillant entre perfidie maligne et nervosité exacerbée, le goblin est un compagnon qui saura vous prêter main forte au combat. À moins qu'il décide de s'enfuir face au danger...",
 
-    "Fée" : "Esprit de la forêt, protectrice des voyageurs égarés, elle saura vous guider grace à la limière qui la fait vivre, gare a ses fourberies qu'elle pourrait vous faire pour passer le temps.",
+    "Fée"        : "Esprit de la forêt, protectrice des voyageurs égarés, elle saura vous guider grâce à la lumière qui la fait vivre. Gare à ses fourberies qu'elle pourrait vous faire pour passer le temps.",
 
-    "Loup-Garou" : "Atteints de Lycantropie, la plus part des humains en étant affecté n'en ont même pas conscience et mènent une vie sanguinaire chaque nuit de pleine lune. On devrait de te laisser tanquille maintenant",
+    "Loup-Garou" : "Atteints de Lycanthropie, la plupart des humains en étant affectés n'en ont même pas conscience et mènent une vie sanguinaire chaque nuit de pleine lune. On devrait te laisser tranquille maintenant.",
 
-    "Sirène" : "Certains marins pensent avoir fait une belle prise en les sortant de leurs filets, mais c'est plutôt elle qui vient d'en prendre une. J'espere qu'il y a un peu d'eau là ou vous allez..."
-
+    "Sirène"     : "Certains marins pensent avoir fait une belle prise en les sortant de leurs filets, mais c'est plutôt elle qui vient d'en prendre une. J'espère qu'il y a un peu d'eau là où vous allez..."
 }
 
-// Fonction de dissimulation et appartiton des bloc section
+// FONCTIONS HIDE / SHOW
 
 const hide = (element) => {
     element.classList.add("hide")
-
 }
 
 const show = (element) => {
     element.classList.remove("hide")
 }
 
-const cacherCreature =() => {
+const cacherCreature = () => {
     for (const img of Object.values(imagesCreatures)) {
         hide(img)
     }
 }
 
-// Logique bouton
+// LOGIQUE BOUTONS
 
 boutonDonjon.addEventListener('click', function() {
     hide(entreeDonjon)
     show(introDonjon)
 })
 
-
 boutonInvoc.addEventListener('click', function() {
-   
     const prenom = inputPrenom.value.trim()
     const creature = selectCreature.value.trim()
 
     if (!prenom) {
-        alert("Je crois ne pas avoir entendu ton prénom, je suis un peu dur de la feuille, essaie en parlant un peu plus fort je t'en pris.")
+        alert("Je crois ne pas avoir entendu ton prénom, je suis un peu dur de la feuille, essaie en parlant un peu plus fort je t'en prie.")
         return
     }
     
@@ -85,10 +79,8 @@ boutonInvoc.addEventListener('click', function() {
     hide(introDonjon)
     show(invocTerminee)
 
-    descriptCreat.textContent = `${prenom}, nous avons reussi à invoquer un.e ${creature} ! ${descriptions[creature]}`
+    descriptCreat.textContent = `${prenom}, nous avons réussi à invoquer un.e ${creature} ! ${descriptions[creature]}`
 })
-
-// CHANGER DE FORME
 
 boutonChanger.addEventListener('click', function() {
     hide(invocTerminee)
