@@ -1,22 +1,100 @@
-/* ----------IMAGES---------- */
+/* ── IMPORT POLICES ───────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=UnifrakturMaguntia&display=swap');
 
-img {
-    height: 400px ;
-    width: auto;
+/* ── VARIABLES DE COULEURS ────────────────────── */
+:root {
+    --couleur-fond       : #0d0a07;   /* noir pierre */
+    --couleur-texte      : #d4af72;   /* parchemin doré */
+    --couleur-accent     : #8b1a1a;   /* rouge sang */
+    --couleur-bouton     : #1e1208;   /* brun sombre */
+    --couleur-bordure    : #5a3e1b;   /* bronze */
 }
 
-/* -----------TEXTE----------- */
+/* ── BASE ─────────────────────────────────────── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* general */
+body {
+    background-color: var(--couleur-fond);
+    color: var(--couleur-texte);
+    font-family: 'Cinzel', serif;
+    min-height: 100vh;
+    text-align: center;
+}
 
+/* ── TYPOGRAPHIE ──────────────────────────────── */
 h1 {
-
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    color: var(--couleur-texte);
+    text-shadow: 0 0 20px var(--couleur-accent);
+    padding: 1.5rem;
+    letter-spacing: 4px;
 }
 
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 1.5rem auto;
+    font-style: italic;
+}
 
+label {
+    display: block;
+    margin: 0.8rem 0 0.3rem;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
 
-/* -------CLASS---------- */
+/* ── BOUTONS ──────────────────────────────────── */
+button {
+    background-color: var(--couleur-bouton);
+    color: var(--couleur-texte);
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border: 2px solid var(--couleur-bordure);
+    padding: 0.8rem 2rem;
+    margin: 1.5rem auto;
+    cursor: pointer;
+    display: block;
+    transition: all 0.3s ease;
+}
 
+button:hover {
+    background-color: var(--couleur-accent);
+    border-color: var(--couleur-texte);
+    box-shadow: 0 0 15px var(--couleur-accent);
+}
+
+/* ── FORMULAIRE ───────────────────────────────── */
+input, select {
+    background-color: #1a1208;
+    color: var(--couleur-texte);
+    font-family: 'Cinzel', serif;
+    border: 1px solid var(--couleur-bordure);
+    padding: 0.5rem 1rem;
+    margin: 0.3rem 0 1rem;
+    width: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ── IMAGES ───────────────────────────────────── */
+img {
+    height: 300px;
+    width: auto;
+    filter: drop-shadow(0 0 12px rgba(139, 26, 26, 0.6));
+}
+
+/* ── CLASSE UTILITAIRE ────────────────────────── */
 .hide {
-    display: none
-} 
+    display: none;
+}
