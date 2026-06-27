@@ -1,0 +1,22 @@
+/* ----------IMAGES---------- */
+
+img {
+    height: 400px ;
+    width: auto;
+}
+
+/* -----------TEXTE----------- */
+
+/* general */
+
+h1 {
+
+}
+
+
+
+/* -------CLASS---------- */
+
+.hide {
+    display: none
+} 

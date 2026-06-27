@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>
+        LA MACHINE A INVOCATION
+    </h1>    
+</header>
+
+<section id="entree_donjon">
+
+    <button id="bouton_donjon">
+        ENTER DANS LE DONJON
+    </button>
+    
+    <img src="">
+    
+</section>
+
+<section id="intro_donjon" class="hide">
+
+    <img src="images/magicien.png" id="sorcier">
+
+    <p>
+        "J'ai crée une machine qui permet d'invoquer bon nombre de créature, néamoins je vais avoir besoin d'un catalyseur afin de finaliser mon sort. Quel est ton nom jeune aventurier.e ?
+        (En donnant votre nom vous accepetez les conditons d'utilisation)"
+    </p>
+    
+    <!-- AJOUTER ZONE D ENTREE NOM ET CREATURE -->
+    <form id="invocation">
+        <label>
+            <label>Note ici ton prenom</label>
+            <input id="prenom">
+
+            <label>Choisi parmis ces créatures</label>
+            <select id="creature">
+                <option> Goblin</option>
+                <option> Fée</option>
+                <option> Loup-Garou</option>
+                <option> Sirène</option>
+            </select>
+        </label>
+
+    </form>
+
+    <button id="bouton_invoc">
+        INVOCATION !
+    </button>
+
+
+</section>
+
+<section id="invocation_terminee" class="hide"> 
+
+    <p> Invocation terminée !</p>
+    
+    <img src="images/goblin.png" id="goblin" class="hide">
+    
+    <img src="images/fee.png" id="fee" class="hide">
+    
+    <img src="images/werwolf.png" id="loup_garou" class="hide">
+    
+    <img src="images/sirene.png" id="sirene" class="hide">
+    
+    <p id="descriptif_creature" class="hide"></p>
+
+    <button id="bouton_changer">CHANGER DE CREATURE</button>
+
+</section>
+
+
+
+</body>
+    <script src="script.js"></script>
+</html>
